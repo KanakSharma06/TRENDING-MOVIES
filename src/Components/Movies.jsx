@@ -22,7 +22,7 @@ const Movies = () => {
   return (
     <div className="container cnt">
       <div
-        className="card"
+        className="card bg-dark"
         style={{ width: "71rem", display: "flex", flexDirection: "row" }}
       >
         <img
@@ -42,7 +42,7 @@ const Movies = () => {
           className="coverImg"
           alt="..."
         />
-        <div className="card-body  text-dark lolo">
+        <div className="card-body  text-light lolo">
           <div
             className="cont d-flex"
             style={{
@@ -51,15 +51,15 @@ const Movies = () => {
               width: "45`%",
             }}
           >
+            <h5 className="card-title">
+              {movie?.title ?? movie?.original_name}
+            </h5>
             <div style={{ width: 79, height: 79 }}>
               <CircularProgressbar
                 value={Math.floor(movie?.vote_average * 10)}
                 text={Math.floor(movie?.vote_average * 10) + "%"}
               />
             </div>
-            <h5 className="card-title">
-              {movie?.title ?? movie?.original_name}
-            </h5>
           </div>
           <br />
           <p className="card-text">
